@@ -1,0 +1,83 @@
+﻿@using Barbershop.Controllers
+@{
+    ViewData["Title"] = "Запись успешна";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            margin-bottom: 2em;
+        }
+
+            .message h1 {
+                font-size: 2.5em;
+                margin-bottom: 0.5em;
+            }
+
+            .message p {
+                font-size: 1.2em;
+                color: #666;
+            }
+
+        .cta {
+            margin-top: 2em;
+        }
+
+            .cta a {
+                background-color: #e74c3c;
+                color: white;
+                padding: 1em 2em;
+                text-decoration: none;
+                font-size: 1.2em;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+                .cta a:hover {
+                    background-color: #c0392b;
+                }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Запись успешна</h1>
+    </div>
+    <div class="container">
+        <div class="message">
+            <h1>Вы успешно записались!</h1>
+            <p>Спасибо за запись. Мы ждем вас в нашем барбершопе в выбранный день.</p>
+        </div>
+        <div class="cta">
+            <a href="@Url.Action(nameof(HomeController.Index), "Home")" class="btn-primary">На главную</a>
+        </div>
+    </div>
+</body>
